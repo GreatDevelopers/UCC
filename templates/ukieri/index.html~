@@ -1,0 +1,67 @@
+<html>
+<head>
+{% include 'ukieri/header.html' %}
+<br>
+<table>
+<tr><td>
+{% if events %}
+    {% for events in events %}
+       <h2>{{ events.type }}<h2></td><td rowspan='4'> <embed type="application/x-shockwave-flash"
+       src="https://picasaweb.google.com/s/c/bin/slideshow.swf" width="288"
+       height="192"
+       flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2Fhardeep.rai%2Falbumid%2F5581765303819120625%3Falt%3Drss%26kind%3Dphoto%26hl%3Den_US"
+       pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+ </td></tr>
+       <tr><td><h3>{{ events.title }}</h3></td></tr>
+       <tr><td>Venue : {{ events.venue }} </td></tr>
+       <tr><td>Date : {{events.date }} -- March 10, 2011 </td></tr>
+       <tr><td> Detail : {{events.detail }} </td>
+       <td>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#UKIERI',
+  interval: 6000,
+  title: 'UKIERI',
+  subject: 'Concrete Congress',
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+       </td>
+       </tr>
+    
+    {% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+
+
+{% include 'ukieri/footer.html' %}
+
+
+</html>

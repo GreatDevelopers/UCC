@@ -1,0 +1,121 @@
+body {
+        color: black;
+/*        background: lightgray;
+*/
+        background:#E0E0E0 ;
+	font-size: 100%;
+}
+
+H1 {
+	text-align: center;
+        font-size: 160%;
+	color: black;
+}
+H2 {
+	text-align: center;
+        color: grey;
+        font-size: 120%;
+}
+H3 {
+	text-align: center;
+        font-size: 140%;
+	color: darkgrey;
+}
+
+ ul.errorlist {
+       margin: 0;
+        padding: 0;
+ }
+ .errorlist li {
+       background-color: red;
+        color: white;
+        display: block;
+        font-size: 14px;
+        margin: 0 0 3px;
+        padding: 4px 5px;
+ }
+
+/* link attributes */
+a:link {
+        color:red;
+        text-decoration: underline;
+}
+a:visited {
+        color: gray;
+        text-decoration: none;
+}
+a:hover {
+      /*  color: 	#FFFFCC;*/
+        color: #CCFF66;
+        font-size: 100%;
+        text-decoration: none;
+}
+
+/*
+
+
+
+       TableCloth
+
+       by Alen Grakalic, brought to you by cssglobe.com
+
+
+
+*/
+
+
+
+/* general styles */
+
+
+
+table, td{
+
+       font:100% Arial, Helvetica, sans-serif;
+
+}
+
+table{width:100%;border-collapse:collapse;margin:1em 0;}
+
+/*th, td{text-align:left;padding:.5em;border:1px solid #fff;}
+*/
+th, td{black; text-align:left;padding:.5em;border:1px solid #fff;}
+
+th{background: repeat-x;color:black}
+
+
+
+td{background:#e5f1f4;}
+
+
+
+/* tablecloth styles */
+
+
+
+tr.even td{background:#e5f1f4;}
+
+tr.odd td{background:#f8fbfc;}
+
+
+
+th.over, tr.even th.over, tr.odd th.over{background:white;}
+
+th.down, tr.even th.down, tr.odd th.down{background:#ecfbd4;}
+
+th.selected, tr.even th.selected, tr.odd th.selected{}
+
+
+
+td.over, tr.even td.over, tr.odd td.over{background:#ecfbd4;}
+
+td.down, tr.even td.down, tr.odd td.down{background:white;color:#fff;}
+
+td.selected, tr.even td.selected, tr.odd
+td.selected{background:#bce774;color:#555;}
+
+
+
+/* use this if you want to apply different styleing to empty table cells*/
+
+td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}

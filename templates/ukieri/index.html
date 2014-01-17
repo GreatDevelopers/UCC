@@ -1,0 +1,127 @@
+<html>
+<head>
+{% include 'ukieri/header.html' %}
+
+<h2>Congress Photos</h2>
+
+<table><tr><td>
+
+<table style="width:194px;"><tr><td align="center"
+style="height:194px;background:url(https://picasaweb.google.com/s/c/transparent_album_background.gif)
+no-repeat left"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_Day1?feat=embedwebsite"><img
+src="https://lh3.googleusercontent.com/_5_9jqIox3ow/TXZp-Gm9L_E/AAAAAAAABZU/pkcer80UtR8/s160-c/UCC_Day1.jpg"
+width="160" height="160" style="margin:1px 0 0 4px;"></a></td></tr><tr><td
+style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_Day1?feat=embedwebsite"
+style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Day 1</a></td></tr></table>
+
+</td><td>
+
+<table style="width:194px;"><tr><td align="center"
+style="height:194px;background:url(https://picasaweb.google.com/s/c/transparent_album_background.gif)
+no-repeat left"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_Day2?feat=embedwebsite"><img
+src="https://lh5.googleusercontent.com/_5_9jqIox3ow/TXxmAbgweCE/AAAAAAAABsA/O7cSkHJPM6M/s160-c/UCC_Day2.jpg"
+width="160" height="160" style="margin:1px 0 0 4px;"></a></td></tr><tr><td
+style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_Day2?feat=embedwebsite"
+style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Day 2</a></td></tr></table>
+
+</td><td>
+
+
+
+<table style="width:194px;"><tr><td align="center"
+style="height:194px;background:url(https://picasaweb.google.com/s/c/transparent_album_background.gif)
+no-repeat left"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_Day3?feat=embedwebsite"><img
+src="https://lh6.googleusercontent.com/_5_9jqIox3ow/TXxzfT_B-JE/AAAAAAAABvw/e-30PiKyqWc/s160-c/UCC_Day3.jpg"
+width="160" height="160" style="margin:1px 0 0 4px;"></a></td></tr><tr><td
+style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_Day3?feat=embedwebsite"
+style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Day 3</a></td></tr></table>
+
+
+</td><td>
+
+
+<table style="width:194px;"><tr><td align="center"
+style="height:194px;background:url(https://picasaweb.google.com/s/c/transparent_album_background.gif)
+no-repeat left"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_UKIERI_Team?feat=embedwebsite"><img
+src="https://lh6.googleusercontent.com/_5_9jqIox3ow/TXxtvwRjYGE/AAAAAAAABp4/HoNX06nvOg0/s160-c/UCC_UKIERI_Team.jpg"
+width="160" height="160" style="margin:1px 0 0 4px;"></a></td></tr><tr><td
+style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a
+href="https://picasaweb.google.com/hardeep.rai/UCC_UKIERI_Team?feat=embedwebsite"
+style="color:#4D4D4D;font-weight:bold;text-decoration:none;">UKIERI Team</a></td></tr></table>
+</td></tr>
+</table>
+
+
+
+
+
+<table>
+<tr><td>
+{% if events %}
+    {% for events in events %}
+       <h2>{{ events.type }}<h2></td><td rowspan='4'> <embed type="application/x-shockwave-flash"
+       src="https://picasaweb.google.com/s/c/bin/slideshow.swf" width="288"
+       height="192"
+       flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2Fhardeep.rai%2Falbumid%2F5581765303819120625%3Falt%3Drss%26kind%3Dphoto%26hl%3Den_US"
+       pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+ </td></tr>
+       <tr><td><h3>{{ events.title }}</h3></td></tr>
+       <tr><td>Venue : {{ events.venue }} </td></tr>
+       <tr><td>Date : {{events.date }} -- March 10, 2011 </td></tr>
+       <tr><td> Detail : {{events.detail }} </td>
+       <td>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#UKIERI',
+  interval: 6000,
+  title: 'UKIERI',
+  subject: 'Concrete Congress',
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+       </td>
+       </tr>
+    
+    {% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+
+
+{% include 'ukieri/footer.html' %}
+
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+{% include 'ukieri/header.html' %}
+<br>
+<table>
+<tr>
+{% if events %}
+    {% for events in events %}
+       <h2>{{ events.type }}<h2></tr>
+       <tr><td><h3>{{ events.title }}</h3></td></tr>
+       <tr><td>Venue : {{ events.venue }} </td></tr>
+       <tr><td>Date : {{events.date }} -- March 10, 2011 </td></tr>
+       <tr><td> Detail : {{events.detail }} </td></tr>
+    
+    {% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+
+
+
+{% include 'ukieri/footer.html' %}
+
+
+</html>

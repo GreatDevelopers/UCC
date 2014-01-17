@@ -1,0 +1,19 @@
+
+from  mysite.ukieri.models import UkieriContact, UkieriDelegateFees, UkieriEvents
+from django.contrib import admin
+from mysite.ukieri.models import UkieriSponsorship, UkieriSchedule, UkieriParticipants
+
+ 
+
+class UkieriAdmin(admin.ModelAdmin):
+        fieldsets = [
+        (None,               {'fields': ['question']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
+        list_display = ('id', 'name', 'email', 'address', 'country', 'city', 'pin_code', 'phone_no')
+        list_filter = ['id']
+        search_fields = ['id']
+
+
+admin.site.register(UkieriContact, UkieriAdmin)
+

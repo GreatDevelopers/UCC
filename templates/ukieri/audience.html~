@@ -1,0 +1,55 @@
+
+{% include 'ukieri/header.html' %}
+<br>
+
+<table>
+<caption>AUDIENCE </caption>
+{% if audience  %}
+<tr><td>
+<ul>       
+ {% for audience in audience %}
+        <li>{{audience.audience}}</li>
+        {% endfor %}</td></tr>
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+
+<table>
+	<tr><th>Download form: <a href="http://202.164.53.116/media/files/UkieriRegistration.pdf ">Registration Form</a>
+	or scroll down to fill in online</th>
+</table>
+<br>
+<table>
+<caption> DELEGATES FEES </caption>
+<tr><th>Registration Type<th>Fee</th>
+{% if delegate  %}
+        {% for delegate in delegate %}<tr>
+        <td>{{delegate.reg_type}}</td> 
+        <td>{{delegate.fees}}</td>
+</tr>{% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+<br>
+<table>
+	<tr>
+		<td><b>CONGRESS DINNER</b> </td>
+		<td>A Congress Dinner will be held during the event.</td>
+	</tr>
+	<tr><td><b>LANGUAGE AND VENUE</b></td>
+	<td>The Congress will be presented in English and will be held on the campus of the IIT Delhi.</td>
+	</tr>
+</table>
+
+<table><tr><th>Registration form (For online filling)</th>
+                </table>
+                
+<iframe
+src="https://spreadsheets.google.com/embeddedform?formkey=dFMwcGRMNWJtYVlHT3REdkh4VE1uLVE6MQ"
+width="760" height="1008" frameborder="0" marginheight="0"
+marginwidth="0">Loading...</iframe>
+
+{% include 'ukieri/footer.html' %}
+

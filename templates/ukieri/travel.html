@@ -1,0 +1,17 @@
+
+{% include 'ukieri/header.html' %}
+<br>
+<table> <caption>ACCOMMODATION AND TRAVELLING TO THE CONGRESS<caption>
+<tr><th>Name<th>Info<th>Contact</tr>
+{% if contact  %}
+    {% for part in contact %}
+        <tr><td>{{ part.name }}<td>{{part.subject}}<td>{{part.contact}}</tr>
+    {% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</td></tr>
+</table>
+
+{% include 'ukieri/footer.html' %}
+

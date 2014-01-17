@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="http://202.164.53.116/~jagdeep/css/rai.css" />
+<h1>
+UKIERI CONGRESS
+</h1>
+<table >
+{% if header %}
+<tr>
+<th> <a href="http://202.164.53.116/django/ukieri/home/">HOME</a></th> 
+<th> <a href="http://202.164.53.116/django/ukieri/sponsorship/">SPONSORSHIP</a></th>
+<th><a href="http://202.164.53.116/django/ukieri/schedule/">SCHEDULE</a></th>
+<th><a href="http://202.164.53.116/django/ukieri/events/">EVENTS</a></th>
+<th><a href="http://202.164.53.116/django/ukieri/audience/">AUDIENCE</a></th>
+<th><a href="http://202.164.53.116/django/ukieri/participants/">PARTICIPANTS</a> </th>
+<th> <a href="http://202.164.53.116/django/ukieri/contact/">CONTACTS</a></th> 
+
+</tr> 
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>

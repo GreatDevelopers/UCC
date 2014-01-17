@@ -1,0 +1,12 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/home/jagdeep/mysite/css/style1.css" />
+Site Coming Soon
+
+{% csrf_token %}
+<h1>
+{{ Contacts.Name }}
+UKIERI CONGRESS 12
+</h1>
+</html>
+

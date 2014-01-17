@@ -1,0 +1,16 @@
+
+{% include 'ukieri/header.html' %}
+<br>
+<table> <caption>CONTACTS<caption>
+<tr><th>Name<th>Email<th>Address<th>City<th>Phone</tr>
+{% if contact  %}
+    {% for part in contact %}
+        <tr><td>{{ part.name }}<td>{{part.email}}<td>{{part.address}}<td>{{part.city}}({{part.pin_code}}),  {{ part.country}}<td>{{part.phone}}</tr>
+    {% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</td></tr>
+</table>
+
+

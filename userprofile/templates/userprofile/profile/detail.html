@@ -1,0 +1,18 @@
+
+{% load i18n %}
+
+{% block content %}
+<table border ="1"> <caption><h1>PERFORMA</h1></caption>
+     <tr><td>Name :</td><td>{{detail.firstname}} {{detail.middlename}} {{detail.lastname}}</td><td>{% if detail.photo %} <img src="{{ detail.photo.url }} "  alt=" Please upload your photo" height="200" width="150" />{% endif %}</td></tr>
+	 <tr><td>Course :</td><td>{{detail.course}}</td></tr>
+	 <tr><td>Branch :</td><td>{{detail.branch}}</td></tr>
+	 <tr><td>Class Roll No :</td><td>{{detail.class_roll_no }}</td></tr>
+	 <tr><td>Date of Birth :</td><td>{{detail.birthdate}}</td></tr>
+	 <tr><td>Father's Name :</td><td>{{detail.father_name}}</td></tr>
+	 <tr><td>Mother's Name :</td><td>{{detail.mother_name}}</td></tr>
+	 <tr><td>Address :</td><td>{{detail.address_1}}, {{detail.address_2}},{{detail.city}}({{detail.pin_code}}),{{detail.state}},{{detail.country}} </td></tr>
+     <tr><td>Contact No. :</td><td>{{detail.contact_no}}</td></tr>
+     <tr><td>Email :</td><td>{{detail.email}}</td></tr>
+     <tr><td>Comments :</td><td>{{detail.comments}}</td></tr>
+</table>	 
+{% endblock %}

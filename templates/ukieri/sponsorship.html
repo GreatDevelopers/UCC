@@ -1,0 +1,38 @@
+{% include 'ukieri/header.html' %}
+<br>
+
+<table>
+	<tr>
+		<th>SPONSORING THE CONGRESS </th>
+	</tr>
+	<tr><td>The focal point of the Congress will be the exhibition and organisations are invited to sponsor the
+event and take the opportunity to exhibit and network with the delegates. Sponsors will gain
+exposure from a range of promotional benefits including : -<br><br>
+<b>FREE TRADE FAIR SPACE AT THE CONGRESS :</b> (Full exhibition cost is Rs 50,000).<br>
+<b>FREE DELEGATES :</b> Number depends on package (see below), any additional delegates at a 35% reduced rate.<br>
+<b>CONGRESS DINNER PROMOTION : </b>Banners with Sponsors names displayed at the Dinner.<br>
+<b>PROMOTION ON THE CONGRESS WEBSITE, BROCHURES AND PROGRAMME :</b>
+The
+Congress website will prominently display details on Sponsors and a link directly to the Sponsor’s own website.
+Sponsors company profile will also be printed in the Programme given to all the delegates at the Congress.
+</tr>
+</table>
+<table>
+<caption>SPONSORSHIP OPPORTUNITIES </caption>
+<tr><th>Packages<th>Amount<th>Free Delegates<th>Exhibition Space <th>Dinner Spaces</th></tr>
+{% if sponsorship  %}
+        {% for ship in sponsorship %}<tr>
+        <td>{{ship.packages}}</td>
+        <td>{{ship.amount}}</td>
+        <td>{{ship.free_delegates}}</td>
+        <td>{{ship.exhibition_space}}</td>
+        <td>{{ship.dinner_spaces}}</td>
+        </tr>{% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+<br>
+
+
+{% include 'ukieri/footer.html' %}

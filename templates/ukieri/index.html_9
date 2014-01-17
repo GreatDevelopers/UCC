@@ -1,0 +1,31 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/media/css/base1.css" />
+<link rel="stylesheet" type="text/css" href="/media/css/base2.css" />
+{% csrf_token %}
+<h1>
+
+UKIERI CONGRESS
+</h1>
+
+<table >
+<tr><th><a href="">HOME</a><th><a href="participants" >PARTICIPANTS</a><th><a href="sponsorship" >SPONSORSHIPS</a><th><a href="events/">EVENTS<th><a href="schedule">SCHEDULE</a></th><th><a href="audience">AUDIANCE</a></th></tr>
+
+<table>
+<tr>
+{% if events %}
+    {% for events in events %}
+       <th><h1>{{ events.type }}<h1></th></tr>
+       <tr><td><h3>{{ events.title }}</h3></td></tr>
+       <tr><td><b>Venue :</b> {{ events.venue }} </td></tr>
+       <tr><td><b>Date : </b> {{events.date }} </td></tr>
+       <tr><td> Detail : </b> {{events.detail }} </td></tr>
+    
+    {% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+</html>
+
+

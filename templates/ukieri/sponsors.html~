@@ -1,0 +1,50 @@
+{% include 'ukieri/header.html' %}
+<br>
+<h2>SPONSORS</h2>
+<br>
+<table>
+<caption>DIAMOND</caption>
+<tr><th>Name<th>Detail</th><th>Contact<th>Logo</th></tr>
+{% if diamond  %}
+        {% for diamond in diamond %}<tr>
+        <td>{{diamond.name}}</td>
+        <td>{{diamond.info}}</td>
+        <td>{{diamond.link}}</td>
+        <td>{{diamond.logo}}</td>
+        </tr>{% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+<br>
+<table>
+<caption>GOLD</caption>
+<tr><th>Name<th>Detail</th><th>Contact<th>Logo</th></tr>
+{% if gold  %}
+        {% for gold in gold %}<tr>
+        <td>{{gold.name}}</td>
+        <td>{{gold.info}}</td>
+        <td>{{gold.link}}</td>
+        <td>{{gold.logo}}</td>
+        </tr>{% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+<br>
+<table>
+<caption>SILVER</caption>
+<tr><th>Name<th>Detail</th><th>Contact<th>Logo</th></tr>
+{% if silver  %}
+        {% for silver in silver %}<tr>
+        <td>{{silver.name}}</td>
+        <td>{{silver.info}}</td>
+        <td>{{silver.link}}</td>
+        <td>{{silver.logo}}</td>
+        </tr>{% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+<br>
+

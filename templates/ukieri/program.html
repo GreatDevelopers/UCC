@@ -1,0 +1,18 @@
+
+{% include 'ukieri/header.html' %}
+
+<br>
+	<table> <caption> PROGRAMME<caption>
+<tr><th>TITLE<th>SUB-TITLE<th>BY<th>DATE</tr>
+{% if program  %}
+     {% for part in program %}
+        <tr><td>{{ part.title}}<td>{{ part.subtitle}}<td>{{ part.by}} <td>{{ part.date}}</td></tr>
+    {% endfor %}
+    
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</td></tr>
+</table>
+
+{% include 'ukieri/footer.html' %}

@@ -1,0 +1,31 @@
+{% include 'ukieri/header.html' %}
+<br>
+<table>
+<caption>SPONSORSHIP</caption>
+<tr><th>Packages<th>Amount<th>Free Delegates<th>Exhibition Space <th>Dinner Spaces</th></tr>
+{% if sponsorship  %}
+        {% for ship in sponsorship %}<tr>
+        <td>{{ship.packages}}</td>
+        <td>{{ship.amount}}</td>
+        <td>{{ship.free_delegates}}</td>
+        <td>{{ship.exhibition_space}}</td>
+        <td>{{ship.dinner_spaces}}</td>
+        </tr>{% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+<br>
+<table>
+<caption> DELEGATES FEES </caption>
+<tr><th>Registration Type<th>Fee</th>
+{% if delegate  %}
+        {% for delegate in delegate %}<tr>
+        <td>{{delegate.reg_type}}</td> 
+        <td>{{delegate.fees}}</td>
+</tr>{% endfor %}
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
+

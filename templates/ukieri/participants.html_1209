@@ -1,0 +1,18 @@
+
+{% include 'ukieri/header.html' %}
+
+<br>
+<table> <caption>PARTICIPANTS<caption>
+<tr><th>NAME<th>WEBSITE<th>CITY<th>COUNTRY<th>LOGO</tr>
+{% if participants  %}
+    {% for part in participants %}
+        <tr><td>{{ part.name }}<td>{{ part.website }}<td>{{ part.city }}<td>{{ part.country }}<td>{% if part.logo %} <img src="{{ part.logo.url }}" />{% endif %} <tr>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</td></tr>
+</table>
+
+

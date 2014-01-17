@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="/media/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/media/css/changelists.css" /><h1>
+UKIERI CONGRESS
+</h1>
+<table >
+{% if header %}
+<tr>
+<th> <a href="http://localhost/django/ukieri/contact/">Contact</a></th> 
+<th><a href="http://localhost/django/ukieri/schedule/">Schedule</a></th>
+</tr> 
+{% else %}
+    <p> Data is Not available.</p>
+{% endif %}
+</table>
